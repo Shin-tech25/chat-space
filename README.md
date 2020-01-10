@@ -32,31 +32,34 @@ Things you may want to cover:
 |nickname|string|null: false|
 ### Association
 - has_many :comments
-- has_many :user-groups
+- has_many :users_groups
+- has_many :groups through: :users_groups
 
 ## commentsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|message|string|null: false|
+|message|string||
 |image|string||
 |user_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
+- belongs_to :group
 
 
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string||
-|user_id|integer|null: false, foreign_key: true|
 ### Association
-- has_many :user-groups
+- has_many :comments
+- has_many :user_groups
+- has_many :users through: :users-groups
 
-## user-groupsテーブル
+## users_groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|users_id|text|null: false, foreign_keys: true|
-|groups_id|text|null: false, foreign_keys:true|
+|user_id|integer|null: false, foreign_keys: true|
+|group_id|integer|null: false, foreign_keys:true|
 ### Association
 - belongs_to :user
 - belongs_to :group
