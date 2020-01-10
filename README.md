@@ -52,7 +52,7 @@ Things you may want to cover:
 |name|string||
 ### Association
 - has_many :comments
-- has_many :users_groups
+- has_many :user_groups
 - has_many :users through: :users-groups
 
 ## users_groupsテーブル
