@@ -5,7 +5,7 @@
         = current_user.name
       %ul.side_bar__user-name__box__icon
         %li.side-bar__user-name__box__icon--edit
-        = link_to "#", class: "side-bar__user-name__box__icon side-bar__user-name__box__icon--edit" do
+        = link_to new_group_path, class: "side-bar__user-name__box__icon side-bar__user-name__box__icon--edit" do
           %i.fa.fa-edit
 
           %span<>
@@ -14,14 +14,22 @@
 
 
   .side-bar__group-list
-    .side-bar__group-list__group
-      %p.side-bar__group-list__group--name
-        techcamp
-      %p.side-bar__group-list__group--info
-        まだメッセージがありません
+    - current_user.groups.each do |group|
+      .group
+        = link_to '#' do
+          .side-bar__group-list__group--name
+            = group.name
+          .side-bar__group-list__group--info
+            メッセージはまだありません。
+
+    -# .side-bar__group-list__group
+    -#   %p.side-bar__group-list__group--name
+    -#     techcamp
+    -#   %p.side-bar__group-list__group--info
+    -#     まだメッセージがありません
     
-    .side-bar__group-list__group
-      %p.side-bar__group-list__group--name
-        sample
-      %p.side-bar__group-list__group--info
-        まだメッセージがありませんね
+    -# .side-bar__group-list__group
+    -#   %p.side-bar__group-list__group--name
+    -#     sample
+    -#   %p.side-bar__group-list__group--info
+    -#     まだメッセージがありませんね
