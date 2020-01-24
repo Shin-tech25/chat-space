@@ -5,22 +5,23 @@
         = current_user.name
       %ul.side_bar__user-name__box__icon
         %li.side-bar__user-name__box__icon--edit
-        = link_to new_group_path, class: "side-bar__user-name__box__icon side-bar__user-name__box__icon--edit" do
-          %i.fa.fa-edit
+          = link_to new_group_path, class: "side-bar__user-name__box__icon side-bar__user-name__box__icon--edit" do
+            %i.fa.fa-edit
 
           %span<>
-        = link_to edit_user_path(current_user) do
-          %i.fa.fa-cog
+        %li.side-bar__user-name__box__icon--cog
+          = link_to edit_user_path(current_user) do
+            %i.fa.fa-cog
 
 
   .side-bar__group-list
     - current_user.groups.each do |group|
       .group
-        = link_to '#' do
+        = link_to group_messages_path(group) do
           .side-bar__group-list__group--name
             = group.name
           .side-bar__group-list__group--info
-            メッセージはまだありません。
+            = group.show_last_message
 
     -# .side-bar__group-list__group
     -#   %p.side-bar__group-list__group--name

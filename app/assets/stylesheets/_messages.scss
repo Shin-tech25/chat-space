@@ -10,6 +10,13 @@
   .side-bar{
     width: 300px;
     height: 100%;
+    a, a:hover, a:visited{
+      color:white;
+      text-decoration: none;
+    }
+    ul {
+      display: flex;
+    }
     &__user-name{
       width: 100%;
       height: 100px;
@@ -18,6 +25,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      padding: 20px;
       &__box{
         width: 260px;
         height: 20px;
@@ -34,6 +42,7 @@
           color: #ffffff;
           &--edit{
             padding-right: 5px;
+            
           }
         }
       }
@@ -134,34 +143,44 @@
     
     }
     .chat-main__message-form{
-      width: 100%;
+      // width: 100%;
+      box-sizing: border-box;
       height: 90px;
       background-color: #d2d2d2;
-      display: flex;
-      align-items: center;
-      &__new-message{
-        width: 100%;
+      background-color: red;
+      padding: 20px 50px 20px 40px;
+      // display: flex;
+      // align-items: center;
+      .chat-main__message-form__new-message {
+        background-color: blue;
+        width: calc(100% - 140px);
         height: 50px;
-        margin:  0 40px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        // margin:  0 40px;
+        padding-left: 5px;
+        float: left;
+        // justify-content: space-between;
+        // align-items: center;
       
         &__input-box{
           position: relative;
-
-          padding: 0;
-          display: inline-block; 
-          width: 100%;
-          height: 100%;
-          line-height: 50px;
+          float: left;
+          // padding: 0;
+          // display: inline-block; 
+          // width: 100%;
+          height: 50px;
+          // line-height: 50px;
           &__text{
+  
             padding-left: 10px;
             height: 100%;
             width: 100%; 
           }
           &__img{
+            position: absolute;
+            top: 5px;
+            right:5px;
             &--remove{
+
               display: none;
             }
           }
@@ -178,7 +197,7 @@
         }
       }
     }
-  
+    
   }
 }
 
