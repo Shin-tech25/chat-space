@@ -115,7 +115,7 @@
     }
 
     .chat-main__message-list{
-      
+      overflow: scroll;
       width: 100%;
       height: Calc(100% - 190px);
       background-color: #fafafa;
@@ -204,7 +204,6 @@
 .hidden {
   display:  none;
 }
-
 
 .fa.fa-image{
   position: absolute;
