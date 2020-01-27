@@ -56,11 +56,9 @@ $(function(){
     })
     .done(function(data){
       var html = buildHTML(data);
-      // console.log(html);
       $('.chat-main__message-list').append(html);
       $('#new_message')[0].reset();
       $('.chat-main__message-list').animate({ scrollTop: $('.chat-main__message-list')[0].scrollHeight});
-      // $('.scroll-box').animate({ scrollTop: $('.scroll-box')[0].scrollHeight});
 
     })
     .fail(function(){
