@@ -123,22 +123,26 @@
 
       &__message{
         margin-bottom: 46px;
-        &__upper-info{
+        &__upper-message{
           display: flex;
           margin-bottom: 12px;
-          &__talker{
+          &__user-name{
             font-size: 16px;
             color: #333333;
             
           }
           &__date{
+            margin-left: 10px;
             color: #999999;
             font-size: 12px;
           }
         }
-        &__text{
+        &__lower-message{
           color: #434A54;
           font-size: 14px;
+          &__content{
+
+          }
         }
       }
     }

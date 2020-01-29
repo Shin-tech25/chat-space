@@ -3,17 +3,17 @@ $(function(){
   function buildHTML(message){
     if ( message.image ) {
       var html =
-       `<div class="message" data-message-id=${message.id}>
-          <div class="upper-message">
-            <div class="upper-message__user-name">
+       `<div class="chat-main__message-list__message" data-message-id=${message.id}>
+          <div class="chat-main__message-list__message__upper-message">
+            <div class="chat-main__message-list__message__upper-message__user-name">
               ${message.user_name}
             </div>
-            <div class="upper-message__date">
+            <div class="chat-main__message-list__message__upper-message__date">
               ${message.created_at}
             </div>
           </div>
-          <div class="lower-message">
-            <p class="lower-message__content">
+          <div class="chat-main__message-list__message__lower-message">
+            <p class="chat-main__message-list__message_lower-message__content">
               ${message.content}
             </p>
           </div>
@@ -22,17 +22,17 @@ $(function(){
       return html;
     } else {
       var html =
-       `<div class="message" data-message-id=${message.id}>
-          <div class="upper-message">
-            <div class="upper-message__user-name">
+       `<div class="chat-main__message-list__message" data-message-id=${message.id}>
+          <div class="chat-main__message-list__message__upper-message">
+            <div class="chat-main__message-list__message__upper-message__user-name">
               ${message.user_name}
             </div>
-            <div class="upper-message__date">
+            <div class="chat-main__message-list__message__upper-message__date">
               ${message.created_at}
             </div>
           </div>
-          <div class="lower-message">
-            <p class="lower-message__content">
+          <div class="chat-main__message-list__message__lower-message">
+            <p class="chat-main__message-list__message__lower-message__content">
               ${message.content}
             </p>
           </div>
